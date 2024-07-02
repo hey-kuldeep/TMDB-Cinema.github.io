@@ -1,0 +1,99 @@
+.container {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+body{
+    background-color: black;
+    color: white;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    color: white;
+    border-radius: 8px;
+    margin: 20px;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+  }
+
+  .rating{
+    font-size: smaller;
+  }
+  
+  .card img {
+    width: 70%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 70%;
+  }
+
+  .card:hover{
+      scale: calc(110%);
+      transition: scale 0.5s;
+      position: relative; /* Required for pseudo-elements */
+      box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.2), /* White glow */
+                  0 0 40px 0 rgba(255, 255, 255, 0.15), /* Light white glow */
+                  0 0 60px 0 rgba(255, 255, 255, 0.1), /* Lighter white glow */
+                  0 8px 16px rgba(0, 0, 0, 0.3); /* Standard box shadow */
+    
+      animation: glow 1s ease-in-out infinite alternate; /* Glowing animation */
+    }
+    
+    /* Keyframes for glowing animation */
+    @keyframes glow {
+      from {
+        opacity: 0.5;
+        box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.2), 
+                    0 0 40px 0 rgba(255, 255, 255, 0.15), 
+                    0 0 60px 0 rgba(255, 255, 255, 0.1), 
+                    0 8px 16px rgba(0, 0, 0, 0.3);
+      }
+      to {
+        opacity: 1;
+        box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.4), 
+                    0 0 40px 0 rgba(255, 255, 255, 0.3), 
+                    0 0 80px 0 rgba(255, 255, 255, 0.2), 
+                    0 8px 16px rgba(0, 0, 0, 0.5);
+      }
+  }
+  
+  .card-content {
+    padding: 5px;
+    text-align: center;
+    width: 70%;
+  }
+  
+  .card-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-overview {
+    font-size: 1rem;
+    color: #666;
+  }
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    overflow: scroll;
+}
