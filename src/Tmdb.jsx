@@ -123,6 +123,7 @@ function Tmdb() {
             <h2>Movie : {data?.original_title}</h2>
             <h2>Release : {data?.release_date}</h2>
             <Rating
+            className='Rating'
               initialRating={data.vote_average / 2}
               emptySymbol={<img src={grey} className="icon" />}
               fullSymbol={<img src={yellow} className="icon" />}
@@ -144,7 +145,7 @@ function Tmdb() {
         {video ? (
           <div>
             <h2>{video.name}</h2>
-            <YouTube videoId={video.key} />
+            <YouTube className='youtube' videoId={video.key} />
           </div>
         ) : (
             <div className='loader2'>

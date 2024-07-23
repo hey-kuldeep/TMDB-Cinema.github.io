@@ -1,107 +1,138 @@
-.show-details {
-    display: flex;
-    background-color: #1a1a1a;
-    color: #ffffff; 
-    box-shadow: 0 8px 16px rgba(253, 251, 251, 0.3);
-    border-radius: 10px; 
-    overflow: hidden; 
-    height: 70vh;
-    width: 80vw;
-  }
-
-  .show-details-content {
-    flex: 1; 
-    padding: 20px;
-  }
-
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 95vh;
-    width: 100vw;
-  }
-  
-  .show-details-image {
-    flex: 0 0 300px; 
-    max-width: 100%; 
-    height: auto; 
-    object-fit: cover; 
-    border-top-left-radius: 10px; 
-    border-bottom-left-radius: 10px; 
-    box-shadow: 8px 0 16px rgba(0, 0, 0, 0.3); 
-  }
-  
-  .show-details h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .show-details img {
-    width: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .rating {
-    margin-bottom: 10px;
-  }
-
-  #bg-img{
-    width: 100%; 
-    filter: blur(1px); 
-  }
-
-  .container {
-    position: relative;
-    overflow: hidden; 
+.container {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#bg-img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover; 
-    filter: blur(1px); 
-    z-index: -1; 
+body{
+  background-color: black;
+  color: white;
 }
 
-.show-details {
-    position: relative; 
-    z-index: 1; 
-    padding: 20px; 
-    color: #ffffff; 
+html{
+scroll-behavior: smooth;
 }
 
-  
-  .alldetails{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    gap: 30px;
-    padding-left: 10px;
-  }
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  color: white;
+  border-radius: 8px;
+  margin: 20px;
+  height: 250px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
-  .rating .icon {
-    width: 20px; 
-    height: 20px; 
-    margin-right: 2px; 
+.rating{
+  font-size: smaller;
+}
+
+.card img {
+  width: 70%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  height: 70%;
+}
+
+.card:hover{
+    scale: calc(110%);
+    transition: scale 0.5s;
+    position: relative; /* Required for pseudo-elements */
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.2), /* White glow */
+                0 0 40px 0 rgba(255, 255, 255, 0.15), /* Light white glow */
+                0 0 60px 0 rgba(255, 255, 255, 0.1), /* Lighter white glow */
+                0 8px 16px rgba(0, 0, 0, 0.3); /* Standard box shadow */
+  
+    animation: glow 1s ease-in-out infinite alternate; /* Glowing animation */
   }
   
-  .genres {
-    margin-bottom: 10px;
-  }
-  
-  .overview {
-    line-height: 1.5;
-  }
-  
+  /* Keyframes for glowing animation */
+  @keyframes glow {
+    from {
+      opacity: 0.5;
+      box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.2), 
+                  0 0 40px 0 rgba(255, 255, 255, 0.15), 
+                  0 0 60px 0 rgba(255, 255, 255, 0.1), 
+                  0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    to {
+      opacity: 1;
+      box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.4), 
+                  0 0 40px 0 rgba(255, 255, 255, 0.3), 
+                  0 0 80px 0 rgba(255, 255, 255, 0.2), 
+                  0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.card-content {
+  padding: 5px;
+  text-align: center;
+  width: 70%;
+}
+
+.card-title {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.card-overview {
+  font-size: 1rem;
+  color: #666;
+}
+
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  overflow: scroll;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  color: white;
+  border-radius: 8px;
+  margin: 20px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.rating{
+  font-size: 5px;
+}
+
+.card img {
+  width: 80%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  height: 60%;
+}
+
+.card-title {
+  font-size: x-small;
+  margin-bottom: 10px;
+}
+
+.card-overview {
+  font-size: x-small;
+  color: #666;
+}
+}

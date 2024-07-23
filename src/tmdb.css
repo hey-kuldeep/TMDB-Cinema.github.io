@@ -15,7 +15,6 @@ html{
 }
 
 #movie-container {
-    /* border: 2px solid black; */
     background-color: gold;
     height: 100px;
     width: 100vw;
@@ -91,7 +90,6 @@ img{
     cursor: pointer;
     transition: all 1s ease;
     box-shadow: 5px 10px 10px black;
-
 }
 
 #search-btn:hover {
@@ -123,8 +121,6 @@ section {
     opacity: 0.8;
     display: flex;
 }
-
-
 
 #movie-about {
     height: 100%;
@@ -215,4 +211,186 @@ h1{
     left: 0;
     bottom: 0;
     width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    /* Resetting defaults */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: gold;
+        width: 100vw;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        transition: scroll-behavior 10s;
+    }
+
+    #movie-container {
+        background-color: gold;
+        height: 100px;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        flex-wrap: wrap;
+        font-family: "Platypi", serif;
+    }
+
+    #logo-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: small;
+    }
+
+    #logo-container img{
+        height: 30px;
+        width: 30px;
+    }
+
+    #logo-container{
+        font-size: 10px;
+    }
+
+    .Rating{
+        font-size: 10px;
+        width: 100%;
+    }
+
+    input {
+        border: none;
+        font-size: smaller;
+        padding-left: 10px;
+        height: 20px;
+        width: 200px;
+        border-radius: 8px 8px 8px 8px;
+        box-shadow: 5px 10px 10px black;
+        font-family: "Platypi", serif;
+    }
+
+    #search-btn {
+        width: 40px;
+        height: 25px;
+        border: none;
+        font-size: 10px;
+        background-color: black;
+        color: white;
+        border-radius: 0 8px 8px 0;
+        cursor: pointer;
+        transition: all 1s ease;
+        box-shadow: 5px 10px 10px black;
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: x-small;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+
+    section {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        overflow-x: hidden; 
+    }
+
+    .movie-details {
+        height: 200px;
+        width: 200px;
+        border-radius: 10px;
+        background-color: white;
+        opacity: 0.8;
+        display: flex;
+        margin-top: 40px;
+    }
+
+    .movie-details img{
+        height: 200px;
+    }
+
+   #movie-about {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 40px;
+    gap: 10px;
+    background-color: black;
+    color: white;
+    text-align: start;
+    font-size: x-small;
+   }
+
+    h2 {
+        text-align: center;
+        font-size: medium; /* Adjusted font size */
+    }
+
+    .list-head1 {
+        height: 50px;
+        width: 100vw;
+        background-color: gold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .list-head1 > h2 {
+        padding: 5px; /* Adjusted padding */
+        font-size: small; /* Smaller font size */
+    }
+
+    .pages {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px; /* Adjusted width */
+        color: white;
+        font-weight: 800;
+        font-size: small; /* Smaller font size */
+    }
+
+    h1 {
+        padding-left: 20px; /* Adjusted padding */
+        font-size: medium; /* Adjusted font size */
+    }
+
+    .pages button {
+        border: none;
+        background-color: transparent;
+        color: white;
+        font-size: small; /* Smaller font size */
+    }
+
+    .pages button:hover {
+        color: black;
+        cursor: pointer;
+    }
+
+    .footerStyle {
+        background-color: gold;
+        color: #000;
+        text-align: center;
+        padding: 0.5rem;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
 }

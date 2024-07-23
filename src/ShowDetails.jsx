@@ -4,7 +4,9 @@ import { useParams } from 'react-router-dom';
 import Rating from 'react-rating';
 import yellow from './assets/star-full.png';
 import grey from './assets/star-empty.png';
-import './ShowDetails.css'; // Import your CSS file
+import './ShowDetails.css'; 
+import loader from './assets/No trespassing.gif'
+
 
 const ShowDetails = () => {
   const { id } = useParams();
@@ -34,7 +36,7 @@ const ShowDetails = () => {
   }, [id]);
 
   if (loading) {
-    return <div className="show-details">Loading...</div>;
+   return <div className='loder'> <img src={loader} height="10px" width='200px' /></div> 
   }
 
   if (error) {
@@ -42,12 +44,12 @@ const ShowDetails = () => {
   }
 
   if (!show) {
-    return null; // Handle case where show details are not available
+    return null; 
   }
 
   return (
     <div className='container'>
-      <img src={`https://image.tmdb.org/t/p/w300${show.poster_path}`} alt={show.name} id='bg-img' />
+      <img src={`https://image.tmdb.org/t/p/w300${show.backdrop_path}`} alt={show.name} id='bg-img' />
 
     <div className="show-details">
       <img src={`https://image.tmdb.org/t/p/w300${show.poster_path}`} alt={show.name} />
