@@ -98,3 +98,21 @@ html{
     height: 600px;
     overflow: scroll;
 }
+
+@media (min-width: 320px) and (max-width: 480px){
+
+  .card-content .rating img{
+    height: 20px;
+    width: 100%;
+  }
+
+   .card:hover{
+      scale: calc(0%);
+      transition: scale 0.5s;
+      position: relative; /* Required for pseudo-elements */
+      box-shadow: none; /* Standard box shadow */
+    
+      animation: glow 1s ease-in-out infinite alternate; /* Glowing animation */
+    }
+
+}

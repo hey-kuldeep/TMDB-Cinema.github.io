@@ -67,7 +67,7 @@ const PopularCartoons = () => {
             )}
             <div className="card-content">
               <h2 className="card-title">{cartoon.name}</h2>
-              <small>{cartoon.first_air_date}</small>
+              <h6>{cartoon.first_air_date}</h6>
               <Rating
                 className='rating'
                 initialRating={cartoon.vote_average / 2} // Convert TMDB's 10-point scale to 5-point scale

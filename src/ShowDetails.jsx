@@ -49,8 +49,6 @@ const ShowDetails = () => {
 
   return (
     <div className='container'>
-      <img src={`https://image.tmdb.org/t/p/w300${show.backdrop_path}`} alt={show.name} id='bg-img' />
-
     <div className="show-details">
       <img src={`https://image.tmdb.org/t/p/w300${show.poster_path}`} alt={show.name} />
       <div className='alldetails'>
@@ -59,8 +57,9 @@ const ShowDetails = () => {
       <p className="genres"><strong>Genres:</strong> {show.genres.map((genre) => (
         <span key={genre.id}>{genre.name},</span>
       ))}</p>
-      <div className="rating">
+      <div className="box">
         <Rating
+          className="rating"
           initialRating={show.vote_average / 2}
           emptySymbol={<img src={grey} className="icon" alt="empty star" />}
           fullSymbol={<img src={yellow} className="icon" alt="yellow star" />}

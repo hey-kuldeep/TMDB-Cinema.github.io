@@ -100,7 +100,7 @@ function Tmdb() {
       </div>
       <div className='navbar'>
         <ul className='navs'>
-          <li><NavLink to="/#app">Trailer</NavLink></li>
+          <li><a href="#app">Trailer</a></li>
           <li><NavLink to="/tvshows">Popular TV Shows</NavLink></li>
           <li><NavLink to="/movies">Popular Movies</NavLink></li>
           <li><NavLink to="/animation">Animation</NavLink></li>
@@ -123,7 +123,7 @@ function Tmdb() {
             <h2>Movie : {data?.original_title}</h2>
             <h2>Release : {data?.release_date}</h2>
             <Rating
-            className='Rating'
+              className='Rating'
               initialRating={data.vote_average / 2}
               emptySymbol={<img src={grey} className="icon" />}
               fullSymbol={<img src={yellow} className="icon" />}
@@ -143,9 +143,9 @@ function Tmdb() {
           <h1>TMDb Movie Trailers</h1>
         </div>
         {video ? (
-          <div>
+          <div  className='youtube'>
             <h2>{video.name}</h2>
-            <YouTube className='youtube' videoId={video.key} />
+            <YouTube videoId={video.key} />
           </div>
         ) : (
             <div className='loader2'>

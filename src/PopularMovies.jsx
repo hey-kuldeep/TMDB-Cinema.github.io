@@ -66,7 +66,7 @@ const PopularMovies = () => {
             )}
             <div className="card-content">
               <h2 className="card-title">{item.title || item.name}</h2>
-              <small>{item.first_air_date || item.release_date}</small>
+              <h6>{item.first_air_date || item.release_date}</h6>
               <Rating
                 className='rating'
                 initialRating={item.vote_average / 2} 

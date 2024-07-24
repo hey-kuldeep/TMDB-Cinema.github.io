@@ -101,6 +101,33 @@ scroll-behavior: smooth;
 
 @media (min-width: 320px) and (max-width: 480px) {
 
+  .container {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+  }
+
+  .show-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .show-details img{
+    width: 60%;
+  }
+
+  .alldetails{
+    text-align: start;
+    margin-top: 20px;
+    border: 2px solid white;
+    width: 90%;
+  }
+
 .card {
   display: flex;
   flex-direction: column;
@@ -113,10 +140,6 @@ scroll-behavior: smooth;
   align-items: center;
   padding-top: 10px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.rating{
-  font-size: 5px;
 }
 
 .card img {
