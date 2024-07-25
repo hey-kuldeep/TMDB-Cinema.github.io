@@ -112,7 +112,7 @@ html{
       position: relative; /* Required for pseudo-elements */
       box-shadow: none; /* Standard box shadow */
     
-      animation: glow 1s ease-in-out infinite alternate; /* Glowing animation */
+      animation: none; /* Glowing animation */
     }
 
 }
